@@ -1,5 +1,6 @@
 #!/bin/bash
 #PBS -j oe
+#PBS -o job.out
 #PBS -A train_scA2016
 #PBS -l select=1:ncpus=1:ngpus=1
 #PBS -q parallel
@@ -9,5 +10,5 @@ module load gnu cuda
 
 nvidia-smi
 
-./axpy_cublas.cuda 8
+~/cineca-cuda/exercises/axpy/axpy_cublas.cuda 8
 
